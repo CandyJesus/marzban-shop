@@ -23,6 +23,8 @@ config = {
     'PANEL_PASS': os.environ.get('PANEL_PASS'),
     'WEBHOOK_URL': os.environ.get('WEBHOOK_URL'),
     'WEBHOOK_PORT': int(os.environ.get('WEBHOOK_PORT')),
+    'SSL_CERT_PATH': os.environ.get('SSL_CERT_PATH'),
+    'SSL_KEY_PATH': os.environ.get('SSL_KEY_PATH'),
 }
 
 bot: Bot = None
