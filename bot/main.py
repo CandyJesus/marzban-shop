@@ -56,7 +56,7 @@ async def main():
 
     setup_application(app, glv.dp, bot=glv.bot)
 
-    ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+    ssl_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     ssl_context.load_cert_chain(glv.config['SSL_CERT_PATH'], glv.config['SSL_KEY_PATH'])
 
     await web._run_app(app, host="0.0.0.0", port=glv.config['WEBHOOK_PORT'], ssl_context=ssl_context)
